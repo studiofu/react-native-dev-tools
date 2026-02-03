@@ -22,7 +22,9 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.knkira.devtools",
-      "versionCode" : 4
+      "compileSdkVersion": 35,
+      "targetSdkVersion": 35,
+      "versionCode": 4
     },
     "web": {
       "bundler": "metro",
@@ -31,7 +33,8 @@
     },
     "plugins": [
       "expo-router",
-      "expo-secure-store"
+      "expo-secure-store",
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true
