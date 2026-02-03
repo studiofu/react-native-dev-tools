@@ -14,7 +14,7 @@ export default function TabTwoScreen() {
     <SafeAreaView className="bg-primary h-full items-center justify-center">
       
         <View className='items-center justify-center'>
-          <Text>Coming Soon.</Text>
+          <Text>Coming Soon. This is update of 2026 Feb</Text>
         </View>
         
     </SafeAreaView>
