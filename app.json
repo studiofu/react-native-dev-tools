@@ -22,8 +22,6 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.knkira.devtools",
-      "compileSdkVersion": 35,
-      "targetSdkVersion": 35,
       "versionCode": 4
     },
     "web": {
@@ -35,14 +33,17 @@
       "expo-router",
       "expo-secure-store",
       "expo-font",
-
       ["expo-build-properties",
         {
           "android": {
             "compileSdkVersion": 35,
             "targetSdkVersion": 35,
             "buildToolsVersion": "35.0.0",
-            "kotlinVersion": "1.9.24"
+            "kotlinVersion": "1.9.25",
+            "extraMavenRepos": [],
+            "gradleProperties": {
+              "android.kotlinVersion": "1.9.25"
+            }
           },
           "ios": {
             "deploymentTarget": "15.1",
