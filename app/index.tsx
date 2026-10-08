@@ -1,7 +1,8 @@
-import { View, Text, SafeAreaView, useColorScheme, Pressable, TouchableOpacity } from 'react-native'
+import { View, Text, useColorScheme, Pressable, TouchableOpacity } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import React, { useEffect } from 'react'
 import { Link } from 'expo-router'
-import { useTheme } from '@react-navigation/native';
+import { useTheme } from 'expo-router/react-navigation';
 import { FontAwesome5 } from '@expo/vector-icons';
 import CustomTomatoDashButton from '@/components/custom-tomato-dash-button';
 

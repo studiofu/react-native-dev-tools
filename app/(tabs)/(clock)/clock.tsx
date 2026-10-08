@@ -24,7 +24,7 @@ const ClockPage = () => {
   const [taskName, setTaskName] = useState('');
   const [taskEffort, setTaskEffort] = useState(1);
   const [menuVisible, setMenuVisible] = React.useState(false);
-  const timerRef = React.useRef<ReturnType<typeof setInterval>>();
+  const timerRef = React.useRef<ReturnType<typeof setInterval> | undefined>(undefined);
 
   const openMenu = () => setMenuVisible(true);
   const closeMenu = () => setMenuVisible(false);  
@@ -172,7 +172,7 @@ const ClockPage = () => {
       >
 
           <View>
-            <Text className='text-white font-bold p-2'>Tomato Clock</Text>
+            <Text className='text-white font-bold p-2' style={{ color: 'white' }}>Tomato Clock</Text>
           </View>
 
           <View className='bg-white/20  p-2 rounded-md pb-5 pt-5 w-[95%] self-center'>
@@ -197,10 +197,19 @@ const ClockPage = () => {
                 
             </View>
             
-            <View className='flex w-full items-center justify-center pt-5 h-[100px]'>
-              <View className='w-[220px]'>
-                <Text className='text-7xl text-white font-bold'>{timerString}</Text>              
-              </View>
+            <View className='w-full items-center justify-center pt-5'>
+              <Text
+                className='text-7xl text-white font-bold'
+                style={{
+                  color: 'white',
+                  textAlign: 'center',
+                  width: '100%',
+                  fontVariant: ['tabular-nums'],
+                  includeFontPadding: false,
+                }}
+              >
+                {timerString}
+              </Text>
             </View>
 
             <View className='flex w-full items-center pt-5 h-[100px]'>
@@ -263,14 +272,14 @@ const ClockPage = () => {
             <>
             <View className='pt-2'></View>
             <View className='justify-center w-[95%] items-center bg-white/20 self-center rounded-md p-2'>
-              <Text className='text-white font-bold'>Focus On</Text>
-              <Text className='text-white font-bold'>{activeTask.title}</Text>
+              <Text className='text-white font-bold' style={{ color: 'white' }}>Focus On</Text>
+              <Text className='text-white font-bold' style={{ color: 'white' }}>{activeTask.title}</Text>
             </View>
             </>
           )}
 
           <View className='w-[95%] flex flex-row justify-between items-center self-center py-2'>
-            <Text className='text-white font-bold pl-1 text-lg'>Tasks</Text>
+            <Text className='text-white font-bold pl-1 text-lg' style={{ color: 'white' }}>Tasks</Text>
             <View className='text-white bg-white/20 rounded-md h-8 w-8 items-center justify-center'>
 
             <Menu
@@ -309,10 +318,10 @@ const ClockPage = () => {
                     <Icon source={"focus-field"} size={20} color='white' />
 
 
-                    <Text className='text-white text-lg font-bold pl-2 flex-nowrap overflow-hidden'>{task.title}</Text>
+                    <Text className='text-white text-lg font-bold pl-2 flex-nowrap overflow-hidden' style={{ color: 'white' }}>{task.title}</Text>
                   </View>
                   <View className='flex flex-row items-center justify-center flex-nowrap'>
-                    <Text className='text-white pr-3'>{task.effortSpent} / {task.effortCount}</Text>
+                    <Text className='text-white pr-3' style={{ color: 'white' }}>{task.effortSpent} / {task.effortCount}</Text>
                     <TouchableOpacity onPress={() => {
                       removeTask(task.id);
                     }}>
