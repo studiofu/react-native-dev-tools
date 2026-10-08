@@ -1,4 +1,5 @@
-import { Image, StyleSheet, Platform, SafeAreaView, View, Text,Dimensions, ScrollView, TouchableOpacity, TextInput } from 'react-native';
+import { Image, StyleSheet, Platform, View, Text,Dimensions, ScrollView, TouchableOpacity, TextInput } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
